@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Legend — GTA 6 Trophy Guide &amp; Tracker</title>
+<meta name="description" content="Offline guide and checklist for all 55 Grand Theft Auto VI trophies on PlayStation 5, with a platinum roadmap, missable warnings and sourced guides.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="hero-text">
+    <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; 55 trophies</p>
+    <h1>Leonida Legend</h1>
+    <p class="lede">The complete trophy guide and tracker for GTA 6: every official name, description and grade, a guide in plain words with its sources, a three-stage road to the platinum, and a checklist that remembers your progress. Fully offline — no network, no account, no artwork borrowed from anyone.</p>
+    <p class="facts"><span><b>1</b> platinum</span><span><b>2</b> gold</span><span><b>6</b> silver</span><span><b>46</b> bronze</span><span><b>28</b> hidden</span><span><b>0</b> online</span><span><b>~200 h</b> to platinum</span></p>
+  </div>
+  <div class="platinum-card" id="platinumCard" aria-label="Platinum progress">
+    <div class="ring-wrap">
+      <svg class="ring" viewBox="0 0 120 120" width="120" height="120" aria-hidden="true">
+        <circle cx="60" cy="60" r="52" class="ring-bg"></circle>
+        <circle cx="60" cy="60" r="52" class="ring-fg" id="ringFg"></circle>
+      </svg>
+      <div class="ring-label"><span id="earnedCount">0</span><small>/ 55</small></div>
+    </div>
+    <p class="platinum-name">Vice Got a Price!</p>
+    <p class="platinum-sub" id="platinumSub">Earn the other 54 trophies to become a Leonida Legend.</p>
+    <div class="bar"><div class="bar-fill" id="barFill"></div></div>
+    <p class="counts" id="gradeCounts"></p>
+  </div>
+</header>
+
+<main>
+  <section class="panel" id="roadmapPanel" aria-labelledby="roadmapTitle">
+    <h2 id="roadmapTitle">Roadmap to the platinum</h2>
+    <p class="panel-note">Three stages, built from the official descriptions. One playthrough is enough, there is no mission replay, and free roam continues after the story — except for a single Chapter 1 meditation. Keep a manual save at the start and end of each chapter.</p>
+    <div class="roadmap" id="roadmap"></div>
+    <p class="missable-banner" id="missableBanner"></p>
+  </section>
+
+  <section class="panel" aria-labelledby="trackerTitle">
+    <h2 id="trackerTitle">Trophy tracker</h2>
+    <div class="toolbar">
+      <label class="search-box">Search
+        <input type="search" id="search" placeholder="Name, mission or keyword…" autocomplete="off">
+      </label>
+      <div class="chips" id="filterChips" role="group" aria-label="Filter trophies"></div>
+      <label class="sort-box">Sort
+        <select id="sort">
+          <option value="roadmap">Roadmap order</option>
+          <option value="grade">Grade (best first)</option>
+          <option value="name">Name A–Z</option>
+          <option value="remaining">Remaining first</option>
+        </select>
+      </label>
+      <span class="progress-pill" id="progressPill">0/55 earned</span>
+    </div>
+    <div class="toolbar toolbar-2">
+      <label class="toggle"><input type="checkbox" id="spoilerToggle"> <span>Hide story spoilers — hide the names and descriptions of story trophies until earned</span></label>
+      <div class="actions">
+        <button type="button" id="exportBtn">Export progress</button>
+        <label class="import-btn">Import progress<input type="file" id="importFile" accept=".json,application/json" hidden></label>
+        <button type="button" id="resetBtn" class="danger">Reset</button>
+      </div>
+    </div>
+    <p class="status-line" id="statusLine" role="status"></p>
+    <noscript><p class="status-line">This tracker needs JavaScript to load the trophy data from app/data/trophies.json. The roadmap above and the sources section below still read fine without it.</p></noscript>
+    <p class="empty" id="emptyMsg" hidden>No trophies match this filter. Try clearing the search or picking another filter.</p>
+    <ol class="trophy-list" id="trophyList"></ol>
+  </section>
+
+  <section class="panel" aria-labelledby="sourcesTitle">
+    <h2 id="sourcesTitle">Sources &amp; honesty notes</h2>
+    <ul class="sources-list">
+      <li><b>Official list:</b> the 55 names, descriptions and grades as PlayStation publishes them, as listed by Exophase and PSNProfiles (the two agree on every name, description and grade); hidden flags as flagged by GTABase.</li>
+      <li><b>Guides:</b> every guide on this page is written in my own words for this entry. Facts and counts are drawn from the PowerPyx trophy guide and roadmap and the GTABase trophy list, and each trophy cites its sources by name beside its guide. Nothing is copied from those guides.</li>
+      <li><b>Not yet confirmed:</b> two trophies were still unconfirmed when the guides published on 19 November 2026 — Bad Luck, I Guess (no verified method yet) and, in part, Fair Game (which animal triggers it) and the Chapter 1 meditation for Positive Mental Attitude (whether it is required). Those guides say so plainly instead of guessing.</li>
+      <li><b>Offline:</b> this page loads nothing from the network. All scripts, styles and data are files under app/, and the only links out are the source citations, which open only if you follow them.</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <p>Leonida Legend — an unofficial fan-made guide. Grand Theft Auto and GTA are trademarks of Take-Two Interactive; this page uses no Rockstar logo, artwork or game screenshots. Trophy data: PlayStation / Exophase / PSNProfiles via GTABase. Guides: PowerPyx and GTABase, cited per trophy.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
